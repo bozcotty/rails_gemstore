@@ -4,7 +4,13 @@
 */
 
 #centerish {
-  padding-left: 400px;
-  width: 600px;
+  padding-left: 200px;
+  width: 800px;
+}
+
+.minify {
+  width: 90px;
+  border: none;
+  margin-bottom: 0;
 }
 

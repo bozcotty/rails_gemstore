@@ -5,7 +5,7 @@
       <a href ng-click="tab.setTab(1)">Description</a>
     </li>
     <li ng-class="{ active:tab.isSet(2) }">
-      <a href ng-click="tab.setTab(2)">Specs</a>
+      <a href data-ng-click="tab.setTab(2)">Specs</a>
     </li>
     <li ng-class="{ active:tab.isSet(3) }">
       <a href ng-click="tab.setTab(3)">Reviews</a>
@@ -16,7 +16,7 @@
   <product-description ng-show="tab.isSet(1)" ></product-description>
 
   <!--  Spec Tab's Content  -->
-  <div product-specs ng-show="tab.isSet(2)"></div>
+  <div product-specs data-ng-show="tab.isSet(2)"></div>
 
   <!--  Review Tab's Content  -->
   <product-reviews ng-show="tab.isSet(3)"></product-reviews>

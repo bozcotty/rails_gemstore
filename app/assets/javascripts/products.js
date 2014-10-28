@@ -34,7 +34,7 @@
           };
 
           this.setTab = function(activeTab) {
-            this.tab = activeTab;
+            return this.tab = activeTab;
           };
         },
         controllerAs: "tab"

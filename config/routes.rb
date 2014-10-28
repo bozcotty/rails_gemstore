@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root 'angular#show'
+  root 'store#show'
 end
 

@@ -1,17 +1,17 @@
 
   <!-- <div data-ng-controller="GemstoreCtrl"> -->
 
-    <div id="centerish" ng-controller="StoreController as store">
+  <div id="centerish" ng-controller="StoreController">
     <!--  Store Header  -->
     <header>
       <h1 class="text-center">Flatlander Crafted Gems</h1>
       <h2 class="text-center">an Angular store</h2>
-      </header>
+    </header>
 
       <!--  Products Container  -->
       <div class="list-group">
       <!--  Product Container  -->
-      <div class="list-group-item" ng-repeat="product in store.products">
+      <div class="list-group-item" ng-repeat="product in products">
         <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
 
         <!-- Image Gallery  -->

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root 'store#show'
+  root 'products#index'
+
+  resources :categories
+  resources :products
 end
 

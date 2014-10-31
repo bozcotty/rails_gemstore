@@ -1,6 +1,7 @@
 (function() {
   var app = angular.module("GemStore");
-  app.controller('AdminController', ['$scope', '$http', function($scope, $http) {
+
+  app.controller('AdminCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.products = [];
     $scope.errors = [];
 
@@ -13,7 +14,7 @@
           $scope.errors.push(data);
           console.log(data);
           console.log(status);
-        });
+        })
     };
 
     $scope.create = function(product) {
@@ -25,7 +26,7 @@
           $scope.errors.push(data);
           console.log(data);
           console.log(status);
-        });
+        })
     };
 
     $scope.update = function(product) {
@@ -57,7 +58,7 @@
           $scope.errors.push(data);
           console.log(data);
           console.log(status);
-        });
+        })
     };
   }]);
-})()
+})();

@@ -14,3 +14,19 @@
   margin-bottom: 0;
 }
 
+.under {
+  text-decoration: underline;
+}
+
+.table1 {
+  td {
+    padding: 0.5em;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+

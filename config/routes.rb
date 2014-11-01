@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  root 'products#index'
+  namespace :api do
+    resources :products, only: [:index, :create, :update, :destroy]
+    resources :categories, only: :index
+  end
 
-  resources :categories
-  resources :products
+  get 'admin/index'
+  root 'store#show'
+
 end
+
 

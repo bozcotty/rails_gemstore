@@ -1,0 +1,79 @@
+
+<div id="centerish">
+
+    <h1 class="text-center">Flatlander Crafted Gems</h1>
+    <h2 class="text-center">Admin Dashboard</h2><br>
+
+
+  <div data-ng-controller="AdminCtrl" data-ng-init='index()'>
+
+    <h4>New Product:</h4>
+    <table class='table1'>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td><label>Title</label>:</td>
+          <td><input type='text' data-ng-model='newProduct.title'></td>
+        </tr>
+        <tr>
+          <td><label>Price</label>:</td>
+          <td><input type='number' data-ng-model='newProduct.price'></td>
+        </tr>
+        <tr>
+          <td><label>Description</label>:</td>
+          <td><input type='text' data-ng-model='newProduct.description'></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button data-ng-click='create(newProduct)'>Create new product</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <br><br>
+
+    <h4 class="under">List of Products:</h4>
+
+    <div data-ng-repeat="product in products">
+
+    <ul>
+
+      <li data-ng-hide="product.editing"><label>Title:</label> {{product.title}}</li>
+      <input type='text' data-ng-model='product.title' data-ng-show='product.editing'>
+
+      <li data-ng-hide="product.editing"><label>Price:</label> ${{product.price}}</li>
+      <input type='number' data-ng-model='product.price' data-ng-show='product.editing'>
+
+      <li data-ng-hide="product.editing"><label>Description:</label>{{product.description}}</li>
+      <input type='text' data-ng-model='product.description' data-ng-show='product.editing'>
+
+    </ul>
+
+      <!-- <p data-ng-hide="product.editing">{{product.shine}}</p>
+      <input type='text' data-ng-model='product.shine' data-ng-show='product.editing'><br>
+
+      <p data-ng-hide="product.editing">{{product.faces}}</p>
+      <input type='text' data-ng-model='product.faces' data-ng-show='product.editing'><br>
+
+      <p data-ng-hide="product.editing">{{product.rarity}}</p>
+      <input type='text' data-ng-model='product.rarity' data-ng-show='product.editing'><br>
+
+      <p data-ng-hide="product.editing">{{product.color}}</p>
+      <input type='text' data-ng-model='product.color' data-ng-show='product.editing'><br> -->
+
+      <div>
+        <button data-ng-click="product.editing = true" data-ng-hide='product.editing'>Edit</button>
+        <button data-ng-click='update(product)' data-ng-show='product.editing'>Update</button>
+        <button data-ng-click='product.editing = false' data-ng-show='product.editing'>No</button>
+      </div>
+      <div>
+        <button data-ng-click='product.deleteConfirm = true' data-ng-hide='product.deleteConfirm'>Delete</button>
+        <button data-ng-show='product.deleteConfirm' data-ng-click='destroy(product)'>Yes</button>
+        <button data-ng-show='product.deleteConfirm' data-ng-click='product.deleteConfirm = false'>No</button>
+      </div>
+      - - - - - - - - - - - - - - - - - - - - - - - -
+      <br>
+    </div>
+  </div>
+</div>
+
+

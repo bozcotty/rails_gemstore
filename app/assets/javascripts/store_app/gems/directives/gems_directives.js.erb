@@ -1,16 +1,16 @@
-(function(){
+(function() {
     var app = angular.module('StoreDirectives', []);
 
     app.directive("productDescription", function() {
       return {
-        restrict: 'E',
+        restrict: 'A',
         templateUrl: "<%= asset_path('store_app/gems/views/description.html')%>"
       };
     });
 
     app.directive("productReviews", function() {
       return {
-        restrict: 'E',
+        restrict: 'A',
         templateUrl: "<%= asset_path('store_app/gems/views/reviews.html')%>"
       };
     });
@@ -24,7 +24,7 @@
 
     app.directive("productTabs", function() {
       return {
-        restrict: "E",
+        restrict: "A",
         templateUrl: "<%= asset_path('store_app/gems/views/tabs.html')%>",
         controller: function() {
           this.tab = 1;
@@ -43,7 +43,7 @@
 
     app.directive("productGallery", function() {
       return {
-        restrict: "E",
+        restrict: "A",
         templateUrl: "<%= asset_path('store_app/gems/views/gallery.html')%>",
         controller: function() {
           this.current = 0;

@@ -9,39 +9,44 @@
 
     <h4>New Product:</h4>
     <table class='table1'>
-    <thead></thead>
-    <tbody>
-      <tr>
-        <td><label>Title</label>:</td>
-        <td><input type='text' data-ng-model='newProduct.title'></td>
-      </tr>
-      <tr>
-        <td><label>Price</label>:</td>
-        <td><input type='number' data-ng-model='newProduct.price'></td>
-      </tr>
-      <tr>
-        <td><label>Description</label>:</td>
-        <td><input type='text' data-ng-model='newProduct.description'></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><button data-ng-click='create(newProduct)'>Create new product</button></td>
-      </tr>
-    </tbody>
-  </table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td><label>Title</label>:</td>
+          <td><input type='text' data-ng-model='newProduct.title'></td>
+        </tr>
+        <tr>
+          <td><label>Price</label>:</td>
+          <td><input type='number' data-ng-model='newProduct.price'></td>
+        </tr>
+        <tr>
+          <td><label>Description</label>:</td>
+          <td><input type='text' data-ng-model='newProduct.description'></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button data-ng-click='create(newProduct)'>Create new product</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <br><br>
 
+    <h4 class="under">List of Products:</h4>
 
+    <div data-ng-repeat="product in products">
 
-    <div data-ng-repeat="product in products"><br><br>
+    <ul>
 
-      <p data-ng-hide="product.editing"><label>Title:</label> {{product.title}}</p>
-      <input type='text' data-ng-model='product.title' data-ng-show='product.editing'><br>
+      <li data-ng-hide="product.editing"><label>Title:</label> {{product.title}}</li>
+      <input type='text' data-ng-model='product.title' data-ng-show='product.editing'>
 
-      <p data-ng-hide="product.editing"><label>Price:</label> ${{product.price}}</p>
-      <input type='number' data-ng-model='product.price' data-ng-show='product.editing'><br>
+      <li data-ng-hide="product.editing"><label>Price:</label> ${{product.price}}</li>
+      <input type='number' data-ng-model='product.price' data-ng-show='product.editing'>
 
-      <p data-ng-hide="product.editing"><label>Description:</label>{{product.description}}</p>
-      <input type='text' data-ng-model='product.description' data-ng-show='product.editing'><br><br>
+      <li data-ng-hide="product.editing"><label>Description:</label>{{product.description}}</li>
+      <input type='text' data-ng-model='product.description' data-ng-show='product.editing'>
+
+    </ul>
 
       <!-- <p data-ng-hide="product.editing">{{product.shine}}</p>
       <input type='text' data-ng-model='product.shine' data-ng-show='product.editing'><br>
@@ -65,6 +70,8 @@
         <button data-ng-show='product.deleteConfirm' data-ng-click='destroy(product)'>Yes</button>
         <button data-ng-show='product.deleteConfirm' data-ng-click='product.deleteConfirm = false'>No</button>
       </div>
+      - - - - - - - - - - - - - - - - - - - - - - - -
+      <br>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 <!--  Product Reviews List -->
 <ul>
   <h4>Reviews</h4>
-  <li ng-repeat="review in product.reviews">
+  <li data-ng-repeat="review in product.reviews">
     <blockquote>
       <strong>{{review.stars}} Stars</strong>
       {{review.body}}
@@ -11,7 +11,7 @@
 </ul>
 
 <!--  Review Form -->
-<form name="reviewForm" ng-controller="ReviewController" data-ng-submit="addReview(product)">
+<form name="reviewForm" data-ng-controller="ReviewController" data-ng-submit="addReview(product)">
 
   <!--  Live Preview -->
   <blockquote >
@@ -31,7 +31,7 @@
     <textarea data-ng-model="review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
   </fieldset>
   <fieldset class="form-group">
-    <input ng-model="review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
+    <input data-ng-model="review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
   </fieldset>
   <fieldset class="form-group">
     <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />

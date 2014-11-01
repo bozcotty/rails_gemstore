@@ -1,26 +1,19 @@
-
-  <!-- <div data-ng-controller="GemstoreCtrl"> -->
-
-  <div id="centerish" ng-controller="StoreController">
-    <!--  Store Header  -->
+<div data-ng-controller="StoreController">
+  <!--  Store Header  -->
+  <div  id="centerish">
     <header>
-      <h1 class="text-center">Flatlander Crafted Gems</h1>
-      <h2 class="text-center">an Angular store</h2>
+      <h1 class="text-center">Boz Angeles Crafted Gems</h1>
+      <h2 class="text-center">a Rails-Angular store</h2>
     </header>
 
-      <!--  Products Container  -->
       <div class="list-group">
-      <!--  Product Container  -->
-      <div class="list-group-item" ng-repeat="product in products">
-        <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+        <div class="list-group-item" data-ng-repeat="product in products">
+          <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+          <div data-product-gallery></div>
+          <div data-product-tabs></div>
+        </div>
 
-        <!-- Image Gallery  -->
-        <product-gallery></product-gallery>
-
-        <!-- Product Tabs  -->
-        <product-tabs></product-tabs>
       </div>
-
-    </div>
   </div>
+</div>
 

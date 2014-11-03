@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require angular.min
+//= require angular-cookies
+//= require angular-route
 //= require store
 //= require_tree .
 

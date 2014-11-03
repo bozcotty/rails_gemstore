@@ -19,5 +19,8 @@ module RailsGemstore
     config.to_prepare do
       DeviseController.respond_to :html, :json
     end
+
+    #devise setup possibly need this:
+    config.assets.initialize_on_precompile = false
   end
 end

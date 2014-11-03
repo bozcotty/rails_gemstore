@@ -15,5 +15,9 @@ module RailsGemstore
         g.helper false
         g.test_framework false
     end
+
+    config.to_prepare do
+      DeviseController.respond_to :html, :json
+    end
   end
 end

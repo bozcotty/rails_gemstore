@@ -20,7 +20,7 @@ module RailsGemstore
       DeviseController.respond_to :html, :json
     end
 
-    #devise setup possibly need this:
+    #devise setup possibly needs this:
     config.assets.initialize_on_precompile = false
   end
 end
